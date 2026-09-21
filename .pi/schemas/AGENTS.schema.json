@@ -1,0 +1,126 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"type": "object",
+	"properties": {
+		"cron": {
+			"type": "object",
+			"patternProperties": {
+				"\\S": {
+					"type": "object",
+					"required": ["schedule", "chain"],
+					"properties": {
+						"schedule": {
+							"type": "string",
+							"minLength": 1
+						},
+						"chain": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"minLength": 1
+							},
+							"minItems": 1
+						}
+					},
+					"additionalProperties": false
+				}
+			},
+			"additionalProperties": false
+		},
+		"pi-preload": {
+			"type": "object",
+			"properties": {
+				"extends": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"minLength": 1
+					}
+				},
+				"presets": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"minLength": 1
+					}
+				},
+				"includes": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"minLength": 1
+					}
+				},
+				"excludes": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"minLength": 1
+					}
+				},
+				"contexts": {
+					"type": "array",
+					"items": {
+						"type": "string",
+						"minLength": 1
+					}
+				}
+			},
+			"additionalProperties": false
+		},
+		"pi-modes": {
+			"type": "object",
+			"patternProperties": {
+				"\\S": {
+					"type": "string"
+				}
+			},
+			"additionalProperties": false
+		},
+		"pi-prompts": {
+			"type": "object",
+			"required": [
+				"prompts"
+			],
+			"properties": {
+				"prompts": {
+					"type": "object",
+					"patternProperties": {
+						"^.*$": {
+							"type": "object",
+							"required": [
+								"body"
+							],
+							"properties": {
+								"description": {
+									"type": "string"
+								},
+								"body": {
+									"type": "string"
+								}
+							},
+							"additionalProperties": false
+						}
+					},
+					"additionalProperties": false
+				},
+				"chains": {
+					"type": "object",
+					"patternProperties": {
+						"^.*$": {
+							"type": "array",
+							"items": {
+								"type": "string",
+								"minLength": 1
+							},
+							"minItems": 1
+						}
+					},
+					"additionalProperties": false
+				}
+			},
+			"additionalProperties": false
+		}
+	},
+	"additionalProperties": true
+}

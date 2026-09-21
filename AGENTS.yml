@@ -1,0 +1,9 @@
+pi-preload:
+  excludes:
+    - ".tasks"
+  presets:
+    - "pi-extension"
+  includes:
+    - "src/**/*.ts"
+    - "test/**/*.ts"
+    - "package.json"
