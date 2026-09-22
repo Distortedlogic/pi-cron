@@ -1,14 +1,13 @@
-import { homedir } from "node:os";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import { CONFIG_DIR_NAME, type ExtensionAPI, RpcClient } from "@earendil-works/pi-coding-agent";
+import { type ExtensionAPI, getAgentDir, RpcClient } from "@earendil-works/pi-coding-agent";
 import { Cron } from "croner";
 import { type AgentsSourceRoot, discoverAgentsSources, loadAgentsSection } from "pi-agents-yaml";
 import { configurationSchema } from "../agents.ts";
 
 const STATUS_KEY = "pi-cron";
 const PACKAGE_ROOT = fileURLToPath(new URL("..", import.meta.url));
-const AGENT_DIRECTORY = process.env.PI_CODING_AGENT_DIR ?? join(homedir(), CONFIG_DIR_NAME, "agent");
+const AGENT_DIRECTORY = getAgentDir();
 const CODING_AGENT_ENTRY = fileURLToPath(import.meta.resolve("@earendil-works/pi-coding-agent"));
 const CLI_PATH = join(dirname(CODING_AGENT_ENTRY), "cli.js");
 const PROMPT_TIMEOUT_MS = 60 * 60 * 1000;
