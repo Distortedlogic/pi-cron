@@ -34,17 +34,17 @@
 	},
 	"dependencies": {
 		"croner": "10.0.1",
-		"pi-agents-yaml": "github:Distortedlogic/pi-agents-yaml#e9905dddf5a73edb22419554ef303cfda4cd250e"
+		"pi-agents-yaml": "github:Distortedlogic/pi-agents-yaml#c4596e468c245fe2d3e5cd5ac4e984e41368fe4c"
 	},
 	"peerDependencies": {
-		"@earendil-works/pi-ai": "*",
-		"@earendil-works/pi-coding-agent": ">=0.85.1 <1",
+		"@earendil-works/pi-ai": "0.87.0",
+		"@earendil-works/pi-coding-agent": "0.87.0",
 		"typebox": "*"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.5.14",
-		"@earendil-works/pi-ai": "0.85.1",
-		"@earendil-works/pi-coding-agent": "0.85.1",
+		"@earendil-works/pi-ai": "0.87.0",
+		"@earendil-works/pi-coding-agent": "0.87.0",
 		"@types/node": "22.20.3",
 		"minimatch": "10.2.6",
 		"tsx": "4.23.15",
