@@ -1,6 +1,6 @@
 {
 	"name": "pi-cron",
-	"version": "0.1.4",
+	"version": "0.1.5",
 	"private": true,
 	"description": "Run scheduled Pi prompt chains from AGENTS.yml.",
 	"type": "module",
@@ -34,7 +34,7 @@
 	},
 	"dependencies": {
 		"croner": "10.0.1",
-		"pi-agents-yaml": "github:Distortedlogic/pi-agents-yaml#2a5f56d3000a3ccf0bcf29b5b388ce344e597fd9"
+		"pi-agents-yaml": "github:Distortedlogic/pi-agents-yaml#d4659fa356ef1eb477c11110fd8e3577cf2fc3cc"
 	},
 	"peerDependencies": {
 		"@earendil-works/pi-ai": "0.87.0",
